@@ -1,7 +1,7 @@
 
 var colors =
   [
-        // Order these in sort order you would expect in Sketch's Menu
+        // Order these in the sort order you would expect in Sketch's Menu
 
         {
             name: 'Text',
@@ -39,153 +39,187 @@ var colors =
     ];
 
 var align =
-    [
+  [
 
-        // Order these in sort order you would expect in Sketch's Menu
+      // Order these in sort order you would expect in Sketch's Menu
+      // If there is an alignment you won't want to generate, you can set it to false
 
-        {
-            type: 'Left',
-            display: true,
-            value: NSTextAlignmentLeft,
-        },
-        {
-            type: 'Center',
-            display: true,
-            value: NSTextAlignmentCenter,
-        },
-        {
-            type: 'Right',
-            display: true,
-            value: NSTextAlignmentRight,
-        },
-        {
-            type: 'Justified',
-            display: false,
-            value: NSTextAlignmentJustified
-        }
-    ]
-
-//Currently only supporting 1 font family
+      {
+          type: 'Left',
+          display: true,
+          value: NSTextAlignmentLeft,
+      },
+      {
+          type: 'Center',
+          display: true,
+          value: NSTextAlignmentCenter,
+      },
+      {
+          type: 'Right',
+          display: true,
+          value: NSTextAlignmentRight,
+      },
+      {
+          type: 'Justified',
+          display: false,
+          value: NSTextAlignmentJustified
+      }
+  ];
 
 var fontFamilies = {
+
+    // Currently only supporting 1 font family, change the family for your styles
+
     sans: 'Roboto',
 }
 
-var fontWeights = ['Regular', 'Light', 'Medium', 'Bold', 'Black',]
-
 var styleList =
   [
+
+    // Create a new object in the array for a new style
+    // name, will be the first level identifier from the text style menu
+    // fontFamily, updates from the fontFamilies var, update there
+    // fontWeight, needs to match a weight selection supplied by the font, check the strings from the dropdown in sketch for the correct name
+    // fontSize, the font size for the style
+    // lineHeight, the lineHeight for the style
+    // characterSpacing, the character spacing for the style
+    // color, by default is pulling from the color array specified above
+    // align, by default is pulling from the align array specified above
+    // textTransform, currently unsupported, leave as null
+
+
     {
       name: 'h1',
-      fontFamily: fontFamilies,
       fontWeight: ['Light'],
       fontSize: 44,
       lineHeight: 50,
       characterSpacing: -.4,
-      textTransform: null,
+      fontFamily: fontFamilies,
       color: colors,
       alignment: align,
+      textTransform: null,
     },
     {
       name: 'h2',
-      fontFamily: fontFamilies,
       fontWeight: ['Light'],
       fontSize: 32,
       lineHeight: 36,
       characterSpacing: -.4,
-      textTransform: null,
+      fontFamily: fontFamilies,
       color: colors,
       alignment: align,
+      textTransform: null,
     },
     {
       name: 'h3',
-      fontFamily: fontFamilies,
       fontWeight: ['Light', 'Bold'],
       fontSize: 24,
       lineHeight: 28,
       characterSpacing: -.3,
-      textTransform: null,
+      fontFamily: fontFamilies,
       color: colors,
       alignment: align,
+      textTransform: null,
     },
     {
       name: 'h4',
-      fontFamily: fontFamilies,
       fontWeight: ['Light', 'Bold'],
       fontSize: 20,
       lineHeight: 22,
       characterSpacing: 0,
-      textTransform: null,
+      fontFamily: fontFamilies,
       color: colors,
       alignment: align,
+      textTransform: null,
     },
     {
       name: 'h5',
-      fontFamily: fontFamilies,
       fontWeight: ['Regular', 'Bold'],
       fontSize: 18,
       lineHeight: 20,
       characterSpacing: 0,
-      textTransform: null,
+      fontFamily: fontFamilies,
       color: colors,
       alignment: align,
+      textTransform: null,
     },
     {
       name: 'h6',
-      fontFamily: fontFamilies,
       fontWeight: ['Medium', 'Bold'],
       fontSize: 16,
       lineHeight: 20,
       characterSpacing: 0,
-      textTransform: null,
+      fontFamily: fontFamilies,
       color: colors,
       alignment: align,
+      textTransform: null,
     },
     {
       name: 'Label',
-      fontFamily: fontFamilies,
       fontWeight: ['Medium', 'Black'],
       fontSize: 12,
       lineHeight: 15,
       characterSpacing: .55,
-      textTransform: null,
+      fontFamily: fontFamilies,
       color: colors,
       alignment: align,
+      textTransform: null,
     },
     {
       name: 'Paragraph',
-      fontFamily: fontFamilies,
       fontWeight: ['Regular', 'Bold'],
       fontSize: 16,
       lineHeight: 24,
       characterSpacing: 0,
-      textTransform: null,
+      fontFamily: fontFamilies,
       color: colors,
       alignment: align,
+      textTransform: null,
     },
     {
       name: 'Paragraph Small',
-      fontFamily: fontFamilies,
       fontWeight: ['Regular', 'Bold'],
       fontSize: 14,
       lineHeight: 21,
       characterSpacing: 0,
-      textTransform: null,
+      fontFamily: fontFamilies,
       color: colors,
       alignment: align,
+      textTransform: null,
     },
     {
       name: 'Caption',
-      fontFamily: fontFamilies,
       fontWeight: ['Regular', 'Bold'],
       fontSize: 12,
       lineHeight: 17,
       characterSpacing: 0,
-      textTransform: null,
+      fontFamily: fontFamilies,
       color: colors,
       alignment: align,
+      textTransform: null,
     },
   ]
+
+
+
+
+
+
+
+
+
+
+// ---------------------------------------------------
+//
+// IMPORTANT!!!!!!!!!!!!!!!!
+// DON'T EDIT PAST THIS POINT
+//
+// ---------------------------------------------------
+
+
+
+
+
 
 
 
@@ -202,7 +236,7 @@ function convertHex(c, opacity){
 }
 
 
-// Want the type style format to follow: Name / Font Weight / Color / Alignment
+// The format will follow: Name / Font Weight / Color / Alignment
 
 var styleCounter = 0;
 
@@ -214,11 +248,9 @@ for(n=0; n<styleList.length; n++){
 
   var styleName = styleObject.name;
 
-  //console.log(styleName);
-
-  //console.log(typeObjects[n].fontWeight.length);
-
-
+  // DEBUG:
+  // console.log(styleName);
+  // console.log(typeObjects[n].fontWeight.length);
 
 
 
@@ -241,7 +273,8 @@ for(n=0; n<styleList.length; n++){
 
       var styleColorTransformed = NSColor.colorWithRed_green_blue_alpha(styleColorTransform[0], styleColorTransform[1],styleColorTransform[2],styleColorTransform[3]);
 
-      //console.log(styleColorName, styleColorTransformed);
+      // DEBUG:
+      // console.log(styleColorName, styleColorTransformed);
 
 
       // Start Alignment Loop
@@ -253,6 +286,7 @@ for(n=0; n<styleList.length; n++){
         var styleAlignValue = styleObject.alignment[a].value;
         var styleAlignDisplay = styleObject.alignment[a].display;
 
+        // DEBUG:
         // console.log(styleAlignValue);
 
 
@@ -339,13 +373,14 @@ for(n=0; n<styleList.length; n++){
 
                 sharedTextStyles.addSharedObject(sharedStyle);
 
+                // TODO:
                 // Add Representation
 
                 // context.document.currentPage().addLayers([layer]);
 
-//                if(n = 1){
-//                  console.log("on first loop")
-//                }
+                // if(n = 1){
+                //   console.log("on first loop")
+                // }
 
                 styleCounter++;
 
