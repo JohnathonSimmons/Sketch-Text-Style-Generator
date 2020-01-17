@@ -1,7 +1,9 @@
-# Sketch-Text-Style-Generator
+# Sketch Text Style Generator
 A script to quickly create multiple variants of a text style.
 
-# Use
+![Reference Image](https://github.com/JohnathonSimmons/Sketch-Text-Style-Generator/res/styleTree.png)
+
+## Use
 1. Edit the script for your use
 2. Copy the script
 3. Use the 'Plugins > Run Script' command inside of Sketch
