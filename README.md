@@ -1,7 +1,7 @@
 # Sketch Text Style Generator
 A script to quickly create multiple variants of a text style.
 
-![Reference Image](https://github.com/JohnathonSimmons/Sketch-Text-Style-Generator/res/styleTree.png)
+![Reference Image](../res/styleTree.png)
 
 ## Use
 1. Edit the script for your use
