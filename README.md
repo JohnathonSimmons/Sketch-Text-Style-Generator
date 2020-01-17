@@ -73,5 +73,5 @@ var styleList = [
 ]
 ```
 
-#### 5. executables
+#### Executables
 The part to make it run, you don't need to edit anything from the executables.
