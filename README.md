@@ -17,6 +17,8 @@ The first 3 are definition of the global variables.
 The 4th is style definition.
 And 5th are the executables.  
 
+---
+
 #### Global Variables
 ##### `var colors`
 An array of color objects to for your text styles to be generated in. By default all styles will use all colors. A color object should have a name and a hexValue, both provided as strings.
@@ -50,6 +52,8 @@ var align =
 ##### `var fontFamilies`
 Current support is provided for a single font family, with multi-support planned. Because of that, font support should be provided as a global variable. (Even if using a serif font, replace the string value after `sans`)
 
+---
+
 #### Style Definition
 ##### `var styleList`
 An array of objects created which allows you to formulate the common elements of the style which you are wanting to generate.
@@ -72,6 +76,8 @@ var styleList = [
   ...
 ]
 ```
+
+---
 
 #### Executables
 The part to make it run, you don't need to edit anything from the executables.
